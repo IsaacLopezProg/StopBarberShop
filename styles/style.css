@@ -724,7 +724,8 @@ ul.footer_social li a i:hover {
 	overflow:hidden;
 	z-index:100;
 	padding:210px 0 155px 0;
-	background: url(http://placehold.co/1920x1280);
+	/* background: url(http://placehold.co/1920x1280); */
+	background: url('../public/img/back_welcome.jpeg');
 	background-position: center top;
     background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -1018,7 +1019,7 @@ h5.team-subtitle {
 	width:100%;
 	position:relative;
 	z-index:100;
-	background: url(http://placehold.co/1920x1280);
+	/* background: url(http://placehold.co/1920x1280); */
 	background-position: center top;
     background-repeat: no-repeat;
 	background-size: cover;
