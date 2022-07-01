@@ -955,14 +955,17 @@ h4.offer-title {
 	font-size: 30px;
     line-height: 38px;
     font-weight: normal;
-    color: #252525;
+    /* color: #252525; */
+	color:#151515
 }
 
 p.offer-text {
 	font-size: 15px;
     line-height: 24px;
     font-weight: normal;
-    color: #454545;
+    /* color: #454545; */
+	color: #171717;
+
 }
 
 .markup-offer {

@@ -1,13 +1,44 @@
+import React, { useEffect, createRef } from 'react';
 import Head from 'next/head';
 // import Script from 'next/script';
 import Image from 'next/image'
 import Scripts from '../components/scripts';
 import Link from 'next/link';
 
-
 export default function Peluqueria() {
 
 
+    const daysRef = createRef();
+    console.log(daysRef);
+    // navbar-collapse in
+    useEffect(() => {
+        // function hola() {
+        //     daysRef.current.className = "navbar-collapse in";
+        // }
+        // hola();
+        (() => (
+
+            function hola() {
+                if (daysRef.current) daysRef.current.className = "navbar-collapse in";
+            }
+        )
+        )()
+
+        // hola();
+
+    }, []);
+
+    // function hola() {
+    //     if (daysRef.current) {
+    //         daysRef.current.className = "navbar-collapse in";
+    //         if (daysRef.current.className === "navbar-collapse in") {
+    //             daysRef.current.className = "collapse navbar-collapse";
+    //         }
+    //     }
+    // }
+
+
+    // hola();
     return (
         <>
 
@@ -30,6 +61,8 @@ export default function Peluqueria() {
 
                         <div className="navbar-header">
                             <button data-target="#navbar-collapse-02" data-toggle="collapse" className="navbar-toggle" type="button">
+
+                                {/* <button onClick={hola} data-target="#navbar-collapse-02" data-toggle="collapse" className="navbar-toggle" type="button"> */}
                                 <span className="sr-only">Toggle navigation</span>
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
@@ -40,7 +73,7 @@ export default function Peluqueria() {
                             </Link>
                         </div>
 
-                        <div id="navbar-collapse-02" className="collapse navbar-collapse">
+                        <div id="navbar-collapse-02" ref={daysRef} className="collapse navbar-collapse">
 
                             <ul className="nav navbar-nav navbar-right">
 
@@ -484,7 +517,7 @@ export default function Peluqueria() {
                                         Masajes facial, con crema y alcohol.
                                     </p>
 
-                                    <a href="#" className="btn-offer btn brown">Desde $300 <span className="markup-offer"></span></a>
+                                    <a href="#" className="btn-offer btn brown">Desde 300 <span className="markup-offer"></span></a>
 
                                 </div>
 
@@ -504,7 +537,7 @@ export default function Peluqueria() {
                                         Medio corte. Con maquina y tijeras.<br />
                                         Recortes con tijeras.</p>
 
-                                    <a href="#" className="btn-offer btn brown">Desde $400 <span className="markup-offer"></span></a>
+                                    <a href="#" className="btn-offer btn brown">Desde 400 <span className="markup-offer"></span></a>
 
                                 </div>
 
@@ -520,12 +553,12 @@ export default function Peluqueria() {
 
                                     <h4 className="offer-title">Cortes para ninos</h4>
 
-                                    <p className="offer-text">Ninos desde los 4 anos hasta los 12. <br />
+                                    <p className="offer-text">Ninos desde los 4 años hasta los 12. <br />
                                         Silla especial para ninos. <br />
                                         {/* ipsam quias net magni. */}
                                     </p>
 
-                                    <a href="#" className="btn-offer btn brown">Desde $250 <span className="markup-offer"></span></a>
+                                    <a href="#" className="btn-offer btn brown">Desde 250 <span className="markup-offer"></span></a>
 
                                 </div>
 
@@ -546,7 +579,7 @@ export default function Peluqueria() {
                                         {/* ipsam quias net magni. */}
                                     </p>
 
-                                    <a href="#" className="btn-offer btn brown">Desde $350 <span className="markup-offer"></span></a>
+                                    <a href="#" className="btn-offer btn brown">Desde 350 <span className="markup-offer"></span></a>
 
                                 </div>
 
@@ -575,7 +608,7 @@ export default function Peluqueria() {
                                 <h2 className="section-title">Barberos</h2>
 
                                 <p className="section-subtitle">Equipo de barberos especializados en el area del cuidado y estilo del pelo masculino,<br />
-                                    con mas de 20 anos de experiencias juntos, brindando un excelente servicio.</p>
+                                    con mas de 20 años de experiencias juntos, brindando un excelente servicio.</p>
                             </div>
 
                         </div>
@@ -625,7 +658,7 @@ export default function Peluqueria() {
                                 <h4 className="team-title">Michael (Hiciano)</h4>
                                 <h5 className="team-subtitle">BARBERO</h5>
 
-                                <p>Barbero especialista en el cuidado de la barba, con mas de 15 anos de experiencia en el area.</p>
+                                <p>Barbero especialista en el cuidado de la barba, con mas de 15 años de experiencia en el area.</p>
                                 <p>Telefono Movil: <br />
                                     <a href="tel:+18296650217">829-665-0217</a>
                                 </p>
@@ -661,7 +694,7 @@ export default function Peluqueria() {
                                 <h4 className="team-title">Adonis (Hiciano)</h4>
                                 <h5 className="team-subtitle">BARBERO</h5>
 
-                                <p>Barbero especialista en el cuidado del pelo, con mas de 15 anos de experiencia en el area.</p>
+                                <p>Barbero especialista en el cuidado del pelo, con mas de 15 años de experiencia en el area.</p>
                                 <p>Telefono Movil: <br />
                                     <a href="tel:+18295369586">829-536-9586</a>
                                 </p>
